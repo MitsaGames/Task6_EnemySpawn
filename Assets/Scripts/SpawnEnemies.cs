@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private EnemyMove _enemyPrefab;
     [SerializeField] private float _spawnTime = 2.0f;
+    [SerializeField] private EnemiesTarget _enemyTarget;
 
     private SpawnPoint[] _spawnPoints;
 
@@ -28,7 +29,8 @@ public class SpawnEnemies : MonoBehaviour
 
                 if (_enemyPrefab)
                 {
-                    Instantiate(_enemyPrefab, currentSpawnPoint.transform.position, Quaternion.identity);
+                    var enemy = Instantiate(_enemyPrefab, currentSpawnPoint.transform.position, Quaternion.identity);
+                    enemy.Init(_enemyTarget);
                 }
 
                 yield return waitToNextSpawn;

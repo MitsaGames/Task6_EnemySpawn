@@ -170,8 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384333a9ddd33fc4594fe60de223c85a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 7962199819078159310, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+  _enemyPrefab: {fileID: -8988328247889160228, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
   _spawnTime: 2
+  _enemyTarget: {fileID: 1778124988}
 --- !u!4 &360160406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2789689397436420138, guid: ac55eb8c27d50924b9bbf7820beddc35, type: 3}
